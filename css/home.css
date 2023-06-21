@@ -2,12 +2,16 @@
 
 .projetos {
     display: flex;
-    gap: 7px;
+    justify-content: space-between;
+}
 
+.projetos .projeto {
+    width: 33vw;
 }
 
 .projetos .projeto img{
     width: 100%;
+    
 }
 
 .projetos .projeto {
@@ -97,6 +101,10 @@
 @media screen and (max-width: 880px) {
     .projetos {
         flex-direction: column;
+    }
+
+    .projetos .projeto {
+        width: 100vw;
     }
 
     .projetos .projeto img{
