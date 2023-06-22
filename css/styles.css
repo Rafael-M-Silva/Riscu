@@ -1,3 +1,9 @@
+:root {
+  --font-color: #191919;
+  --background: #eee;
+  --color-black: #000;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,300&display=swap');
 
 /*  ========================== font externa ==========================  */
@@ -31,7 +37,7 @@
   list-style: none;
   outline: none;
   text-decoration: none;
-  color: #191919;
+  color: var(--font-color);
 }
 
 body {
@@ -39,7 +45,11 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #eee;
+  background: var(--background);
+}
+
+.scroll-remove {
+  overflow: hidden;
 }
 
 main {
@@ -64,9 +74,9 @@ header .navbar ul li {
   background: #FFE500;
   padding: 6px 12px;
   border-radius: 100px;
-  border: #000 solid 1px;
+  border: var(--color-black) solid 1px;
   text-transform: uppercase;
-  box-shadow: #000 3px 3px 0px;
+  box-shadow: var(--color-black) 3px 3px 0px;
   cursor: pointer;
   transition: .1s linear;
   font-family: 'Riscu Brico', 'Sans-serif';
@@ -84,7 +94,7 @@ header .navbar ul .selected:hover {
 
 
 header .navbar ul li:hover {
-  box-shadow: #000 1px 1px 0px;
+  box-shadow: var(--color-black) 1px 1px 0px;
   transform: translateY(3px) translateX(3px);
 }
 
@@ -98,16 +108,34 @@ header .navbar .menu-mobile {
   cursor: pointer;
 }
 
+/*  ========================== drop menu ========================== */
 
-header .navbar .menu-mobile div {
+header .navbar .drop-menu {
   display: flex;
-  background: #000;
-  height: 6px;
-  transition: .3s linear;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 3;
+  background: #ffffff65;
+  backdrop-filter: blur(4px);
+}
 
+
+header .navbar .menu-mobile div {
+  background: var(--color-black);
+  height: 6px;
+  transition: .3s linear;
+  border-radius: 4px;
+}
+
+header .navbar .open {
+  z-index: 5;
+  position: sticky;
 }
 
 
@@ -122,6 +150,8 @@ header .navbar .open div:nth-child(2) {
 header .navbar .open div:nth-child(3) {
   transform: rotate(-50deg) translateY(-16px) translate(12px);
 }
+
+
 
 /*  ========================== media queries menu ==========================  */
 
@@ -141,22 +171,26 @@ header .navbar .open div:nth-child(3) {
   }
 
   header .navbar ul {
-    display: none;
+   display: none;
   } 
+}
+
+@media screen and (max-width: 530px) {
+  header {
+    justify-content: center;
+  }
 }
 
 /*  ========================== footer ==========================  */
 
 footer {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
 }
 
 footer p {
   font-family: 'Riscu Brico';
   font-size: 12px;
-  color: #191919;
-  margin: 0;
 }
