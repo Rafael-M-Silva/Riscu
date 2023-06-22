@@ -3,6 +3,7 @@
 .projetos {
     display: flex;
     justify-content: space-between;
+    gap: 3px;
 }
 
 .projetos .projeto {
@@ -21,6 +22,7 @@
 }
 
 
+
 /*  ========================== Efeito espelho no projeto ==========================  */
 
 .projetos .projeto .sobre {
@@ -36,7 +38,7 @@
     backdrop-filter: blur(5px);
     width: 100%;
     height: 99%;
-    transition: .4s linear;
+    transition: .3s linear;
     transform: translateY(400px);
     opacity: 0;
     visibility: hidden;
@@ -79,7 +81,7 @@
     text-align: center;
     white-space: nowrap;
     font-family: 'Riscu Noto';
-    font-size: 18px;
+    font-size: 24px;
     text-transform: capitalize;
 }
 
@@ -97,6 +99,15 @@
 /*  ========================== media queries menu ==========================  */
 
 
+@media screen and (max-width: 1400px) {
+    .projetos .projeto {
+        width: 100%;
+    }
+
+    .marquee .content-marquee li {
+        font-size: 16px;
+    }
+}
 
 @media screen and (max-width: 880px) {
     .projetos {
@@ -104,12 +115,14 @@
     }
 
     .projetos .projeto {
-        width: 100vw;
+        width: 100%;
+       
     }
 
     .projetos .projeto img{
         width: 100%;
         object-fit: cover;
+        aspect-ratio: 4/2;
     }
 
     .marquee .content-marquee li {
@@ -120,3 +133,13 @@
         width: 30px;
     }
   }
+
+  @media screen and (max-width: 530px) {
+
+    .projetos .projeto img{
+        aspect-ratio: unset;
+    }
+  }
+
+
+

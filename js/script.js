@@ -1,18 +1,17 @@
 const menuMobile = document.querySelector(".menu-mobile")
 
-const handleClick = () => {
+const dropMenuMobile = () => {
+  const dropMenu = document.querySelector(".navbar ul")
+  const body = document.querySelector("body")
   menuMobile.classList.toggle("open")
+
+  if(menuMobile.className === "menu-mobile open"){
+    dropMenu.classList.add("drop-menu")
+    body.classList.add("scroll-remove")
+  }else {
+    dropMenu.classList.remove("drop-menu")
+    body.classList.remove("scroll-remove")
+  }
 }
 
-menuMobile.addEventListener("click", handleClick)
-
-
-// Verifica se o tema do navegador é claro ou escuro
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    var favicon = document.querySelector("link[rel='icon']");
-    favicon.href = "./assets/favicon-light.svg";
-  } else {
-    var favicon = document.querySelector("link[rel='icon']");
-    favicon.href = "./assets/favicon-dark.svg";
-  }
-  
+menuMobile.addEventListener("click", dropMenuMobile)
