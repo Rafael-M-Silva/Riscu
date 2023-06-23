@@ -28,6 +28,12 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Riscu Noto Regular';
+  src: url('../fonts/NotoSerif-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
 /*  ========================== reset ==========================  */
 
 * {
@@ -194,3 +200,16 @@ footer p {
   font-family: 'Riscu Brico';
   font-size: 12px;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: #191919;
+  border-radius: 4px;
+}
+
