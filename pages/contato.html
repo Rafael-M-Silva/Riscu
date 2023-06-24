@@ -8,6 +8,7 @@
     <title>Riscu</title>
     <link rel="icon" href="../assets/favicon-dark.svg" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contato.css">
 </head>
 
 <body>
@@ -40,11 +41,38 @@
     </header>
 
     <main>
-        <h1>Contato</h1>
+        <form>
+            <label for="name">
+                Nome:
+                <input type="text" name="name" id="name" placeholder="Digite seu nome" required>
+            </label>
+
+            <label for="email">
+                E-mail:
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+            </label>
+
+            <textarea name="ideia" id="ideia" rows="12" cols="50" placeholder="Sua ideia aqui" required></textarea>
+            <button>Enviar</button>
+        </form>
+
+        <a href="https://wa.me/5511916370228" target="_blank">
+            <div class="wpp">
+                <img src="../assets/wpp.svg" alt="">
+            </div>
+        </a>
+
     </main>
 
+
     <footer>
-        <p>&copy; 2023 Riscu. Todos os direitos reservados.</p>
+        <p>Desenvolvedor, Rafael Mauricio - Entre em contato: <a href="mailto:rafael_mauricio@hotmail.com">rafael_mauricio@hotmail.com</a></p>
+        <div class="wpps">
+            <a href="https://wa.me/5519981848627" target="_blank">
+                <img src="../assets/wpp.svg" alt="wpp do Desenvolvedor">
+
+            </a>
+        </div>
     </footer>
 
     <script src="../js/script.js"></script>

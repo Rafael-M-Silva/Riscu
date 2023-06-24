@@ -157,6 +157,45 @@ header .navbar .open div:nth-child(3) {
   transform: rotate(-50deg) translateY(-16px) translate(12px);
 }
 
+/*  ========================== footer ==========================  */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 20px;
+  padding: 0px 20px;
+}
+
+footer p {
+  font-family: 'Riscu Brico';
+  font-size: 12px;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer .wpp {
+  cursor: pointer;
+}
+
+footer .wpp img {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: #191919;
+  border-radius: 4px;
+}
+
 
 
 /*  ========================== media queries menu ==========================  */
@@ -178,38 +217,19 @@ header .navbar .open div:nth-child(3) {
 
   header .navbar ul {
    display: none;
-  } 
+  }
 }
+
 
 @media screen and (max-width: 530px) {
   header {
     justify-content: center;
   }
-}
 
-/*  ========================== footer ==========================  */
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10px;
-}
-
-footer p {
-  font-family: 'Riscu Brico';
-  font-size: 12px;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-
-
-::-webkit-scrollbar-thumb {
-  width: 10px;
-  background: #191919;
-  border-radius: 4px;
+  footer p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
