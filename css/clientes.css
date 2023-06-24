@@ -101,11 +101,11 @@ footer {
     }
 
     .imagens .img-duo {
-        width: 50%;
+        width: 100%;
     }
 
     .imagens .img-duo img {
-        width: 100%;
+        width: 50%;
     }
 }
 
