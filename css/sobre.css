@@ -34,5 +34,24 @@ main {
 }
 
 .artista img {
-    width: 300px;
+    width: 285px;
+}
+
+/* ==================== media queries ======================== */
+
+@media screen and (max-width: 840px) {
+    main {
+        flex-direction: column;
+    }
+
+    section {
+        margin: auto;
+    }    
+}
+
+
+@media screen and (max-width: 660px) {
+    main {
+        padding: 0px 50px;
+    }
 }
