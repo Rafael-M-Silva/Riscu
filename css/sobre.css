@@ -1,0 +1,38 @@
+main {
+    margin-top: 40px;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre {
+    font-family: "Riscu Noto Regular";
+    max-width: 500px;
+    font-size: 18px;
+}
+
+.sobre .riscu {
+    width: 100%;
+    height: 50px;
+    background-image: url(../assets/riscu.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sobre h1 {
+    width: 300px;
+    font-family: "Riscu Brico";
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    padding: 20px 0px;
+    background-image: url(../assets/riscu.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.artista img {
+    width: 300px;
+}
