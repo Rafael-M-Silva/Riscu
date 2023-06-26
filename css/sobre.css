@@ -55,3 +55,10 @@ main {
         padding: 0px 50px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    main {
+        padding: 20px;
+    }
+  
+  }
